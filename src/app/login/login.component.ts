@@ -10,8 +10,8 @@ export class LoginComponent {
 data="your perfect banking partner"
 data1="Enter your account number"
 
-acno:any
-psw:any
+// acno:any
+// psw:any
 
   userDetails:any={
     1000:{username:"anu",acno:1000,password:"abc123",balance:0},
@@ -22,12 +22,46 @@ psw:any
 
   }
 
-  login(){
-    // alert('Login successfull')
-    var acnum=this.acno
-    var psw=this.psw
-    var userDetails=this.userDetails
+  // login(){
+  //   // alert('Login successfull')
+  //   var acnum=this.acno
+  //   var psw=this.psw
+  //   var userDetails=this.userDetails
 
+  //     if(acnum in userDetails){
+  //       if(psw==userDetails[acnum]["password"]){
+  //         alert('login Success')
+  //       }
+  //       else{
+  //         alert("incorrect password")
+  //       }
+  //     }
+  //     else{
+  //       alert("incorrect account number")
+  //     }
+  // }
+
+  // acnoChange(event:any){
+  //     console.log(event.target.value);
+  //     this.acno=event.target.value
+      
+  // }
+
+  // passChange(event:any){
+  //   this.psw=event.target.value
+  //   console.log(event.target.value);
+    
+  // }
+
+  login(acnum:any,psw:any){
+
+    console.log(acnum.value,psw.value);
+    
+    // alert('Login successfull')
+    var acnum=acnum.value
+    var psw=psw.value
+    var userDetails=this.userDetails
+  
       if(acnum in userDetails){
         if(psw==userDetails[acnum]["password"]){
           alert('login Success')
@@ -41,16 +75,6 @@ psw:any
       }
   }
 
-  acnoChange(event:any){
-      console.log(event.target.value);
-      this.acno=event.target.value
-      
-  }
-
-  passChange(event:any){
-    this.psw=event.target.value
-    console.log(event.target.value);
-    
-  }
-
 }
+
+
